@@ -8,7 +8,7 @@ public class BankAccount {
 	
 	private int accNo;
 	private String accHolderName;
-	private double balance;
+	private double balance = 2000;
 	private String accType;
 	
 	
@@ -37,21 +37,8 @@ public class BankAccount {
 		this.accType = accType;
 	}
 	
-	public void withdraw(int amount) {
-		double rem_balance = getBalance()-amount;
-		if(amount > getBalance()) {
-			System.out.println("insufficient balance");
-		} else {
-			System.out.println("withdrawal done successfully");
-			setBalance(rem_balance);
-		}
-	}
 	
-	public void deposit(int amount) {
-		double updated_balance = getBalance()+amount;
-		setBalance(updated_balance);
-		System.out.println("amount deposited successfully");
-	}
+	
 	
 	public void print() {
 			//System.out.println("Account details are ");
